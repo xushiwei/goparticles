@@ -11,7 +11,7 @@
 
 怎么才能让别人抄不动？其一是跑得足够快。其二是打明牌，让人想抄都无从抄起。
 
-![alt text](images/image-0.png)
+<img src=images/image-0.png width=480>
 
 Go+ 语言是我在 2020 年打的一张明牌。我一直相信，七牛总有一天会因为 Go+ 而不同。李想在一次采访中说：特斯拉的实力最接近苹果，有自己的芯片和操作系统，远非任何传统汽车厂商可比。我非常认同，很多时候竞争壁垒可能来自常人（商人）忽略的地方。想要别人没法很容易抄你，你得走几步别人看不明白，甚至看明白了也学不会的棋。
 
@@ -41,11 +41,11 @@ Go+ 语言是我在 2020 年打的一张明牌。我一直相信，七牛总有�
 
 比如，随着 AI 编程的兴起，业内很多人都惊呼，程序员要失业了。认为未来不需要程序员，人们可以用自然语言编程，这可能是 AI 时代最似是而非、且被广泛接受的认知谬误。
 
-![alt text](images/image-1.png)
+<img src=images/image-1.png width=480>
 
 这样的认知谬误其实深度思考的人一般是不会犯的。比如我前老板雷军，他在自然语言编程说兴起的当下，在一次采访中说现在程序语言不一样了，他在重新学习编程。雷总是一个很严谨的人，但又有程序员式的浪漫，我印象最深的是 2021 年 6 月某天他突然发给我一个 13 年前的 Bug（见图）。所以当他说要重新学编程我是很相信的，这说明他认为这事很重要，而不是像某些 CEO 那样只是说说而已。
 
-![alt text](images/image-2.png)
+<img src=images/image-2.png width=480>
 
 自然语言辅助编程，和自然语言编程是完全不同的概念。自然语言辅助编程，这里自然语言是交互工具。而自然语言编程，意味着要用自然语言实现工程自动化。但是自然语言是不精确的，它和工程自动化是相背离的。
 
@@ -83,11 +83,11 @@ Go+ 为什么会赢？我把编程语言的市场分成了 3 块：
 
 Go+ 想吃哪块蛋糕？全部。
 
-![alt text](images/image-3.png)
+<img src=images/image-3.png width=640>
 
 在 2021 年 Go+ 1.0 发布会上，我把 Go+ 诞生比做编程领域的 iPhone 时刻。在 iPhone 一代发布的那场经典演讲中，乔布斯把 iPhone 比做 iPod、Internet、Phone 三合一的一个产品。而 Go+ 同样是 Go、Python、Scratch 的三合一，它们分别代表了工程、数据科学和 STEM 教育。
 
-![alt text](images/image-4.png)
+<img src=images/image-4.png width=640>
 
 三合一的目标是好的，但是具体每一个战场 Go+ 要怎么打？会不会因为目标太大而搞得四不像？我们一一分析。
 
@@ -101,7 +101,7 @@ Go+ 怎么打败 Go？
 
 Go+ 是如何做到 C 和 Python 生态兼容的？我们基于 LLVM 实现了自己的 Go 编译器 LLGo。这个项目很新，2024 年 4 月 15 日启动，5 月 13 日发布 v0.8 版本就实现了 C 和 Python 库的支持，前后只用了不到一个月的时间。
 
-![alt text](images/image-5.png)
+<img src=images/image-5.png width=640>
 
 为什么可以做得这么快？这得益于正确的技术路线。LLGo 选择了基于 ABI 二进制兼容 C 和 Python，源码级兼容 Go。Go 虽然有提供 cgo 来兼容 C 生态，LLGo 也兼容 cgo（只是出于尽可能让绝大部分 Go 工程都不需要修改的考虑），但是 cgo 的体验是糟糕的，它没有成为 Go 的亮点，反而成为槽点。而 LLGo 二进制兼容 C 和 Python 的方式意味着我们放弃了古怪的 cgo 语法，用最纯正的 Go 语法来引用 C 和 Python 库，就好像它们天生就是 Go 世界的一部分一样。
 
@@ -109,11 +109,11 @@ Go+ 是如何做到 C 和 Python 生态兼容的？我们基于 LLVM 实现了�
 
 一是它简化了面向对象编程（OOP）。Go+ 通过变量 + 函数这两个非常基础的概念实现了用户自定义类型（UDT）。很简洁，也很酷。
 
-![alt text](images/image-6.png)
+<img src=images/image-6.png width=480>
 
 二是它解决了领域友好（SDF，Specific Domain Friendliness）的问题。
 
-![alt text](images/image-7.png)
+<img src=images/image-7.png width=960>
 
 领域专用语言（DSL）是曾经很火的概念。但通过前面编程语言发展史的分析我们知道，DSL 是错误的方向。那么，领域友好（SDF）这件事情正确的方向是什么？
 
@@ -151,11 +151,11 @@ Go+ 怎么打败 Scratch？
 
 Go+ Mini Spec 概念的数量和 Scratch Spec 很接近，但能力却远远超过。例如在 Scratch 中用户不能自定义函数，只能自定义命令（有的语言中叫过程，在 Scratch 中叫 block）。Go+ 中只做语法集的筛选，所有涉及的概念与工程师们的理解保持一致，避免需要二次学习。
 
-![alt text](images/image-8.png)
+<img src=images/image-8.png width=640>
 
 另外，Scratch 中只有内建的 event，而无法用户自定义。而 Go+ 中 event 只是普通函数，特别之处仅仅是它有一个参数是闭包。
 
-![alt text](images/image-9.png)
+<img src=images/image-9.png width=640>
 
 需要重点说明的是，Go+ Mini Spec 因为它小巧，所以非常适合 STEM 教育。但 Go+ Mini Spec 并不专为 STEM 教育设计。哪怕工程师在做一项大型工程的时候，我们也非常鼓励他们尽可能只使用 Go+ Mini Spec 来工作，只有在极少的情况下才去用 Go+ Full Spec 中的高级功能。
 
