@@ -107,7 +107,7 @@ Go+ v1.3：Go+ Mini Spec、领域文本及 TPL
 
 * https://github.com/goplus/gop/issues/1770
 
-jsx 文法在前端开发中已经被广泛地应用。但对 Go+ 来说，内建 jsx 文法的收益并不明确，该提案一直被搁置。
+jsx 文法在前端开发中已经被广泛地应用。但对 Go+ 来说，内建 jsx 文法的收益并不明确，所以该提案一直被搁置。
 
 直到由于 Go+ Mini Spec 的需要，我们需要在 Go+ 中支持 TPL 文法，于是这两件事情被放在一起来看。
 
