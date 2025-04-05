@@ -141,6 +141,8 @@ Go+ 应该如何支持领域文本？
 * regexp, regexposix（和 regexp 类似，只是语法略有差异）
 * html（需要用户 import "golang.org/x/net/html" 才能使用）
 
+以下是它们的一些例子：
+
 <img src=images/image-2.png width=960>
 
 用户完全可以自己添加新的领域文本的支持。所谓 `domainTag` 其实代表的是一个包（package），只要该 package 全局有 func New(string) 函数（该函数的返回值可以任意）即可。而领域文本其实就只是对该包的 New 函数的调用而已，因此原理非常非常简单。
