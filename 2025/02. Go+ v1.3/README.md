@@ -87,7 +87,7 @@ Go+ v1.3：Go+ Mini Spec、领域文本及 TPL
 
 这是 TPL 文法版本的 Go+ Mini Spec 大体的样子：
 
-![alt text](images/image-0.png)
+<img src=images/image-0.png width=960>
 
 并且我们还提供了 `gopminispec` 程序来检验某个 Go+ 工程是否满足 Go+ Mini Spec：
 
@@ -130,7 +130,7 @@ Go+ 应该如何支持领域文本？
 
 其实在有人提出希望 Go+ 支持 jsx 文法之后，我就在反复琢磨这个问题。最后我在 markdown 文档中找到了答案：
 
-![alt text](images/image-1.png)
+<img src=images/image-1.png width=960>
 
 最初，我想干脆 Go+ 的领域文本和 markdown 的领域文本语法完全一致。但是考虑到这将导致 Go+ 代码将无法再作为领域文本嵌入到 markdown 文档中，这会极大降低 Go+ 与 markdown 之间的友好性，反复斟酌后最终选择了当前的 Go+ 领域文本表示（见上图）。
 
@@ -141,7 +141,7 @@ Go+ 应该如何支持领域文本？
 * regexp, regexposix（和 regexp 类似，只是语法略有差异）
 * html（需要用户 import "golang.org/x/net/html" 才能使用）
 
-![alt text](images/image-2.png)
+<img src=images/image-2.png width=960>
 
 用户完全可以自己添加新的领域文本的支持。所谓 `domainTag` 其实代表的是一个包（package），只要该 package 全局有 func New(string) 函数（该函数的返回值可以任意）即可。而领域文本其实就只是对该包的 New 函数的调用而已，因此原理非常非常简单。
 
@@ -174,7 +174,7 @@ TPL 最早诞生于 2006 年，并于 2008 年中开源。它是一个 C++ 模�
 
 所以 Go+ TPL 是对 TPL 的一次大重构。为什么要重构？
 
-![alt text](images/image-3.png)
+<img src=images/image-3.png width=720>
 
 因为无论是 C++ 版 TPL 还是 Go 版本的 TPL，概念都有点多（上图是 C++ 版 TPL 相关的概念，Go 版本完全类似），不容易理解。究其原因，大部分是由于 TPL 有 Action 这样一个东西导致的复杂性。
 
@@ -266,7 +266,7 @@ echo cl.parseExpr("1, 2, 3", nil)!
 echo vals
 ```
 
-你可以在 Go+ Playground（https://play.goplus.org/）中输入这段代码并执行，结果如下：
+你可以在 [Go+ Playground](https://play.goplus.org/) 中输入这段代码并执行，结果如下：
 
 ```
 [<nil> [[, <nil>] [, <nil>]]]
@@ -347,7 +347,7 @@ echo cl.parseExpr("1 + 2 * -3", nil)!
 
 Go+ v1.3 是 Go+ 发展上很重要的里程碑。Go+ 的三合一：
 
-![alt text](images/image-4.png)
+<img src=images/image-4.png width=640>
 
 至此已经只差最后一小步，实现与 Python 生态的完美兼容。支持 import Python 库解决了最难的一步，但后续还有非常多的工作要做。
 
