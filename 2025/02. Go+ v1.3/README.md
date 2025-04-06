@@ -182,9 +182,9 @@ TPL 最早诞生于 2006 年，并于 2008 年中开源。它是一个 C++ 模�
 
 所谓 Action，是指在规则匹配成功后执行的一个动作。因为 Action 有副作用，所以 C++ TPL 和 Go TPL 写代码心智负担略重。为了减轻负担，TPL 里面有一个 Mark 的概念，你可以简单理解它为无副作用的一类 Action。但 Mark 并不通用，仅仅是对 Action 副作用的一个小补丁。
 
-Go+ TPL 决定放弃 Action，改引入 “匹配结果改写（rewrite matching results）”。当规则当前匹配成功但是到后面发现整个分支都是错的时候放弃时，改写的匹配结果和规则是一起放弃的，这就解决了有代码带来的灵活性，但是又没有 Action 副作用带来的负担。
+Go+ TPL 决定放弃 Action，改为引入 “匹配结果改写（rewrite matching results）”。当规则当前匹配成功但是到后面发现整个分支都是错的时候放弃时，改写的匹配结果和规则是一起放弃的，这就解决了有代码带来的灵活性，但是又没有 Action 副作用带来的负担。
 
-匹配结果改写（rewrite matching results）概念大大简化了 TPL 的复杂性。不过它并非 Go+ TPL 首创，而是源于我另一个名为 BPL（Binary Processing Library）的项目（它诞生于 2016 年 4 月，并于 2019 年开源）：
+“匹配结果改写（rewrite matching results）”概念大大简化了 TPL 的复杂性。不过它并非 Go+ TPL 首创，而是源于我另一个名为 BPL（Binary Processing Library）的项目（它诞生于 2016 年 4 月，并于 2019 年开源）：
 
 * https://github.com/goplus/bpl
 
