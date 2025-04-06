@@ -7,7 +7,7 @@ Go+ v1.3：Go+ Mini Spec、领域文本及 TPL
 * 引入 Go+ Mini Spec（Go+ v1.3 预览版）
 * 支持 import C/C++ 和 Python 库（Go+ v1.3 预览版）
 
-今天 Go+ v1.3 版本功能已经进入冻结状态。除了还在进行中的 wasm 支持，不会再增加任何功能。所以，这一篇我们打算对 Go+ v1.3 的重要更新进行说明，并对其中 Go+ Mini Spec、领域文本及 TPL 相关的内容进行详细展开。
+今天 Go+ v1.3 版本功能已经进入冻结状态。除了还在进行中的 Wasm 支持，不会再增加任何功能。所以，这一篇我们打算对 Go+ v1.3 的重要更新进行说明，并对其中 Go+ Mini Spec、领域文本及 TPL 相关的内容进行详细展开。
 
 ## Go+ 语言增强的逻辑边界
 
@@ -53,7 +53,7 @@ Go+ v1.3：Go+ Mini Spec、领域文本及 TPL
 
 * 支持 import C/C++ 和 Python 库。Go+ 对 import C/C++ 和 Python 库的支持通过 LLGo 完成。当前 C/C++ 库的支持已经非常成熟，并且我们将会提供自动化工具覆盖主流的 C/C++ 库，而不必像 cgo 那样需要用户自己手工迁移 C/C++ 库到 Go 世界。Go+ 对 Python 库的支持仍然是实验性的，它将是 Go+ 未来版本的重点。
 
-* wasm 支持。Go+ 对 wasm 的支持通过 LLGo 完成。LLGo 生成的 wasm 将比 Go 官方编译器编译得到的 wasm 尺寸更小，且在使用 cgo 的情况下仍然支持生成 wasm 文件（Go 官方编译器在使用 cgo 下不支持 wasm）。
+* Wasm 支持。Go+ 对 Wasm 的支持通过 LLGo 完成。LLGo 生成的 Wasm 将比 Go 官方编译器编译得到的 Wasm 尺寸更小，且在使用 cgo 的情况下仍然支持生成 Wasm 文件（Go 官方编译器在使用 cgo 下不支持 Wasm）。
 
 * classfile 内置 clone 支持，使对象克隆操作变得更加高效。可能的应用场景：Web 框架中为每个新连接创建 Handler 实例。在没有 clone 支持前，我们通常需要通过 reflect（反射）机制来实现对象的 clone，这不仅代码晦涩难懂，而且会带来不小的性能开销。
 
@@ -338,7 +338,7 @@ echo cl.parseExpr("1 + 2 * -3", nil)!
 
 * Go+ Mini Spec 发布
 * 领域文本，尤其是 Go+ 的 TPL 文法的内置支持
-* 支持 import C/C++ 和 Python 包，并支持生成 wasm 文件
+* 支持 import C/C++ 和 Python 包，并支持生成 Wasm 文件
 
 本文重点介绍了 Go+ Mini Spec、领域文本及 TPL。这是 Go+ v1.2 推出正式版本的 classfile 之后，Go+ 在领域友好（SDF）问题上的又一重大举措。
 
